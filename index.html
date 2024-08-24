@@ -10,5 +10,14 @@
     <p>Use the Printify or Printful API to order your custom shirt.</p>
     <!-- Add form or API integration here -->
     <script src="js/script.js"></script>
+    <form id="shirtOrderForm">
+        <label for="shirtType">Shirt Type:</label>
+        <input type="text" id="shirtType" name="shirtType" required>
+        <label for="shirtSize">Shirt Size:</label>
+        <input type="text" id="shirtSize" name="shirtSize" required>
+        <label for="shirtColor">Shirt Color:</label>
+        <input type="text" id="shirtColor" name="shirtColor" required>
+        <button type="submit">Order Shirt</button>
+    </form>
 </body>
 </html>
