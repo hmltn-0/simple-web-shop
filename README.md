@@ -1,28 +1,33 @@
-### Image Generation with LaTeX and ImageMagick
+# Simple Web Shop
 
-This repository contains the code and images for generating high-resolution logos using LaTeX and ImageMagick.
+## Project Overview
 
-**To generate `squeezed_logo_v3.png`:**
+This repository contains the source code and assets for a simple web shop utilizing Printify API for custom t-shirt orders. 
 
-1. Create the LaTeX file:
-```latex
-\documentclass{standalone}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\begin{document}
-\Huge
-\vspace*{3in}$\Sigma$\kern-0.1em$\vdash$\kern-0.1em$\Delta$\kern-0.1em$\vdash$\kern-0.1em$\Pi$
-\vspace*{3in}
-\end{document}
-```
+### Directory Structure
+- `angular/`: Contains Angular project files.
+- `js/`: Contains JavaScript files.
+- `assets/`: Contains assets such as LaTeX source files and images.
+      - `latex/source`: LaTeX source (.tex) and auxiliary files (.aux, .log).
+      - `latex/images`: Generated images and PDFs from LaTeX files.
 
-2. Compile the LaTeX file to a PDF:
-```sh
-pdflatex squeezed_logo_v3.tex
-```
+## Developer Notes
+- **LaTeX Documentation**: See the `image_generation.md` and `resizing_and_squeezing_letters.md` for commands and instructions to generate and adjust images.
 
-3. Convert the PDF to a high-resolution PNG using ImageMagick:
-```sh
-magick convert -density 6000 -background white -alpha remove -resize 12000x12000 squeezed_logo_v3.pdf squeezed_logo_v3.png
-```
+## To-Do List:
+- [ ] Integrate Printify API for product management
+- [ ] Finalize web shop layout and UI/UX
+- [ ] Implement checkout and payment functionalities
+- [ ] Set up deployment workflows
+
+## Useful Commands:
+- Compile LaTeX to PDF:
+  ```sh
+  pdflatex <filename>.tex
+  ```
+- Convert PDF to PNG using ImageMagick:
+  ```sh
+  magick convert -density 6000 -background white -alpha remove -resize 12000x12000 <filename>.pdf <filename>.png
+  ```
+
 
