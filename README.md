@@ -20,10 +20,13 @@ This repository contains the source code and assets for a simple web shop utiliz
 The Printify API allows for programmatic management of custom products. Below are some of the commands used:
 - **Generate an API Key**: Visit [Printify API](https://printify.com/api) to generate an API key.
 - **Get Available Blueprints**:
-```sh
-curl -X GET "https://api.printify.com/v1/catalog/blueprints" -H "Authorization: Bearer <API_KEY>"
-markdown
+
+`curl -X GET "https://api.printify.com/v1/catalog/blueprints" -H "Authorization: Bearer <API_KEY>"`
+
+
 - **Create a Product**:
+
+```
 curl -X POST "https://api.printify.com/v1/shops/<SHOP_ID>/products.json" -H "Authorization: Bearer <API_KEY>" -H "Content-Type: application/json" -d '{
     "title": "Custom T-Shirt",
     "blueprint_id": 3,
@@ -47,7 +50,7 @@ curl -X POST "https://api.printify.com/v1/shops/<SHOP_ID>/products.json" -H "Aut
       }
     ]
   }'
-sh
+```
 ## Useful Commands:
 - Compile LaTeX to PDF:
 pdflatex <filename>.tex
