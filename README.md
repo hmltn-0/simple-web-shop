@@ -63,3 +63,16 @@ sh
 - [ ] Finalize web shop layout and UI/UX
 - [ ] Implement checkout and payment functionalities
 - [ ] Set up deployment workflows
+
+## Vercel Deployment Commands:
+
+1. Install Vercel CLI:
+npm install -g vercel
+
+2. Login to Vercel:
+vercel login
+
+3. Deploy to Vercel:
+vercel
+
+
